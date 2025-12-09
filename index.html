@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoloRanger – STEM Resource Finder & Lab Status Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head> 
+<body class="user-bg">
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <h1>SoloRanger – STEM Resource Finder & Lab Status Hub</h1>
+      <p>
+        A centralized web hub for students to discover STEM labs, equipment, and software,
+        and check simple real-time availability indicators.
+      </p>
+    </header>
+
+    <!-- Controls -->
+    <section class="controls">
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search labs, equipment, software..."
+      />
+
+      <select id="typeFilter">
+        <option value="all">All Types</option>
+        <option value="Lab">Labs</option>
+        <option value="Equipment">Equipment</option>
+        <option value="Software">Software</option>
+      </select>
+
+      <button id="adminToggle" class="admin-btn">
+        Admin Mode: OFF
+      </button>
+    </section>
+
+    <!-- Colour Legend -->
+    <div class="legend">
+      <span class="legend-item">
+        <span class="dot available"></span> Available
+      </span>
+      <span class="legend-item">
+        <span class="dot busy"></span> Busy / Crowded
+      </span>
+      <span class="legend-item">
+        <span class="dot maintenance"></span> Under Maintenance
+      </span>
+    </div>
+
+    <!-- Resource list -->
+    <section id="resourcesList" class="list">
+      <!-- Cards rendered by app.js -->
+    </section>
+
+    <!-- Admin: Create New Resource -->
+    <section id="adminCreateBox" class="admin-create hidden">
+      <h2>Create New Resource</h2>
+      
+      <input id="newName" type="text" placeholder="Resource name..." />
+      <input id="newLink" type="text" placeholder="Resource website link (optional)..." />
+
+      <select id="newType">
+        <option value="lab">Lab</option>
+        <option value="equipment">Equipment</option>
+        <option value="software">Software</option>
+      </select>
+
+      <input id="newLocation" type="text" placeholder="Location..." />
+
+      <input id="newTags" type="text" placeholder="Tags (comma separated)..." />
+
+      <input id="newLink" type="text" placeholder="Resource website link (optional)" />
+
+      <button id="createBtn">Create Resource</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-section">
+        <h2>Problem It Solves</h2>
+        <ul>
+          <li>Central access to STEM labs, equipment, and software.</li>
+          <li>Students can check availability before going to the lab.</li>
+          <li>Reduces overcrowding and wasted time walking around.</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h2>Future Enhancements</h2>
+        <ul>
+          <li>Connect to a real campus database.</li>
+          <li>Role-based login for admins and students.</li>
+          <li>Time-slot booking system.</li>
+          <li>Analytics dashboard for busiest labs & resources.</li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
